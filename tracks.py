@@ -1,6 +1,24 @@
 import numpy as np
+import pygame
+import math
 
 class Track:
+    """set up a pygame enviroment"""
+    def __init__(self, width=800, height=800):
+        pygame.init()
+
+        # Screen sizes
+        self.width = width
+        self.height = height
+
+        # create display
+        self.screen = pygame.display.set_mode((width, height))
+
+        #figure out what you want it to do
+        
+
+
+    """Matrix enviroments"""
     @staticmethod
     def getEasy():
         track = np.array([[1, 1, 1, 1, 1, 1, 1],
@@ -61,9 +79,3 @@ class Track:
                     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]])
         return track
 
-    @staticmethod
-    def getCustom():
-        # You can add a custom track here
-        # use the custom mazedrawpy
-        # or upload image
-        return None
